@@ -1,6 +1,5 @@
 const Profile = require('../models/profile');
 const User = require('../models/user');
-const Item = require('../models/item');
 
 module.exports = {
     index

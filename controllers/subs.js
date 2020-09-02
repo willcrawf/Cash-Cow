@@ -1,28 +1,27 @@
-const Sub = require('../models/sub')
 const User = require('../models/user')
 module.exports = {
     index,
-    create,
-    new: newSub
+    new: newSub,
+    create
 }
 
 function index(req, res){
-
-    Sub.find({}, function(err, subs) {
-        res.render('subs/index', {title: "Current Subscriptions:", subs, user: req.user})
+    User.findById(req.user._id, function(err, user){
+        console.log(user.subs)
+        res.render('subs/index', {title: 'Current Subscriptions', user})
     })
 }
 
 function newSub(req, res){
-    res.render('subs/new', {title: "New Subscription"})
+    res.render('subs/new', {title: 'New Subscription', user: req.user})
 }
 
-function create(req, res){
-    const sub = new Sub(req.body)
-    sub.save(function(err) {
-        if (err) return res.render('subs/index')
-        console.log(sub)
-        // res.redirect('/movies')
-        res.redirect(`/subs/${req.user._id}`)
-    })  
+function create(req, res) {
+    req.body.user = req.params.userId
+    User.findById(req.user._id)
+    .then(user => {
+        user.subs.push(req.body)
+        user.save(function(){
+            res.redirect('/subs')})
+        })
 }
