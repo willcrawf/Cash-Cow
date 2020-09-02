@@ -22,9 +22,6 @@ const itemSchema = new Schema({
   date: Date,
   category: String,
   upcoming: String,
-  
-}, {
-  timestamps: true
 })
 
 var userSchema = new mongoose.Schema({
@@ -33,7 +30,7 @@ var userSchema = new mongoose.Schema({
   avatar: String,
   googleId: String,
   totalSpendings: Number,
-  budget: Number,
+  budget: {type: Number, default: 500},
   topCategories: [topCategoriesSchema],
   items: [itemSchema],
   subs: [subSchema]

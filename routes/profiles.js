@@ -3,7 +3,7 @@ var profileCtrl = require('../controllers/profiles');
 
 
 
-router.get('/profiles', profileCtrl.show)
-router.get('/profiles/newBudget', profileCtrl.newBudget)
-router.post('/profiles/addBudget', profileCtrl.addBudget)
+router.get('/', profileCtrl.index)
+router.get('/new' , profileCtrl.new)
+router.post('/:userId', profileCtrl.create)
 module.exports = router;

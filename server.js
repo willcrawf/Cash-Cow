@@ -50,7 +50,7 @@ app.use('/auth', authRouter)
 app.use('/budget', budgetRouter)
 app.use('/', itemsRouter)
 app.use('/subs', subsRouter)
-app.use('/', profilesRouter)
+app.use('/profiles', profilesRouter)
 app.use('/topCategories', topCategoriesRouter)
 
 // invalid request, send 404 page
