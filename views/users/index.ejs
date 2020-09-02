@@ -1,0 +1,24 @@
+<%- include('../partials/header') %>
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="" class="brand-logo left">Users</a>
+        <ul class="right">
+          <li>
+          <% if (user) { %>
+            <a href="/auth/logout">Log Out</a>
+          <% } else { %>
+            <a href="/auth/google">Login with Google</a>
+          <% } %>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <ul>Registered Users:
+    <% users.forEach(u => { %>
+      <li><%= u.name %></li>
+    <% }) %>
+  </ul>
+  <%- include('../partials/footer') %>
+

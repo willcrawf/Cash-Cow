@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+<form id="add-item-form" action="/subs" method="POST">
+    <label>Subscription Name:
+    <input type = "text" class = "new" name="name">
+    </label>
+
+    <label>Cost per cycle:
+    <input type = "text" class = "new" name="costPerCycle">
+    </label>
+
+    <label>Date Subscribed:
+    <input type = "date" class = "new" name="date">
+    </label>
+
+
+    <button id = "submitBtn" type = "submit" class = "btn btn-primary">Add Item</button>
+
+<%- include('../partials/footer') %>

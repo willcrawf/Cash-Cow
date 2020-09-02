@@ -1,0 +1,17 @@
+body {
+    font-family: 'Londrina Solid', cursive;
+    margin: 20px;
+    text-align: center;
+    background-color: #F9F871;
+    color: #494738;
+}
+
+
+h1 {
+    text-align: center;
+    margin: 10px;
+}
+
+#header {
+    padding: 5px;
+}

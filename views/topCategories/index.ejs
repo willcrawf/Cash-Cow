@@ -1,0 +1,42 @@
+<%- include('../partials/header') %>
+<% function numberWithCommas(x) { %>
+    <% return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); %>
+<% } %>
+<table class="table table-striped table-dark">
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th>Amount</th>
+            <th>Total Cost</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <% categories.forEach((category) => { %>
+                <% let totalCost = 0; %>
+                <td> <%= category %> </td>
+                <% let count = 0; %>
+                <% for(let i = 0; i < items.length; i++) {%>
+                    <% if(items[i].category === category) { %>
+                      <%  count += 1 %>
+                      <% totalCost += items[i].cost %>
+                   <% } %>
+            <% } %> 
+            <td><%=count%></td>
+            <td><%=totalCost%></td>
+            </tr>
+            <% }) %>
+               
+        </tr>
+    </tbody>
+</table>
+<% let totalSpendings = 0 %>
+  <h3> Total Spendings: 
+      <% items.forEach((m) => { %>
+        <% totalSpendings += m.cost %>
+  <% }) %>
+  $<%= numberWithCommas(totalSpendings) %>
+  <% User.totalSpendings %> 
+  </h3>
+<%- include('../partials/footer') %>
