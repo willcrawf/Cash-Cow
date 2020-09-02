@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+const Schema = mongoose.Schema
 
 
 const topCategoriesSchema = ({
@@ -7,6 +8,17 @@ const topCategoriesSchema = ({
   cost: Number
 })
 
+const itemSchema = new Schema({
+  name: String,
+  cost: Number,
+  location: String,
+  date: Date,
+  category: String,
+  upcoming: String,
+  
+}, {
+  timestamps: true
+})
 
 var userSchema = new mongoose.Schema({
   name: String,
@@ -15,7 +27,8 @@ var userSchema = new mongoose.Schema({
   googleId: String,
   totalSpendings: Number,
   budget: Number,
-  topCategories: [topCategoriesSchema]
+  topCategories: [topCategoriesSchema],
+  items: [itemSchema]
 }, {
   timestamps: true
 });

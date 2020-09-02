@@ -15,7 +15,7 @@
       </tr>
     </thead>
     <tbody>
-      <% items.forEach((m) => { %>
+      <% user.items.forEach((m) => { %>
         <tr>
           <td><%= m.name %></td>
           <td>$<%=m.cost %></td>
@@ -40,7 +40,7 @@
   </table>
 <% let totalSpendings = 0 %>
   <h3> Total Spendings: 
-      <% items.forEach((m) => { %>
+      <% user.items.forEach((m) => { %>
         <%totalSpendings += m.cost %>
   <% }) %>
   $<%=numberWithCommas(totalSpendings) %> %> 

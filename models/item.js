@@ -8,7 +8,7 @@ const itemSchema = new Schema({
     date: Date,
     category: String,
     upcoming: String,
-    user: {type: Schema.Types.ObjectId, ref: 'User'}
+    
 }, {
     timestamps: true
 })

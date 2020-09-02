@@ -6,7 +6,8 @@ module.exports = {
 }
 
 function index(req, res){
-    Item.find({}, function(err, items){
-        res.render('budget/index', {title: 'Monthly Budget', items, User})
+    User.findById(req.user._id, function(err, user){
+        console.log(user.items)
+        res.render('budget/index', {title: 'Monthly Budget', user})
     })
 }

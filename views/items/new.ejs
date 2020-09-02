@@ -1,5 +1,5 @@
 <%- include('../partials/header') %>
-<form id="add-item-form" action="/items" method="POST">
+<form id="add-item-form" action="/items/<%=user._id %>" method="POST">
     <label>Item Name:
     <input type = "text" class = "new" name="name">
     </label>
@@ -37,5 +37,6 @@
         <input class = "new" type ="checkbox" name = "upcoming">
     </label>
 
-    <button id = "submitBtn" type = "submit" class = "btn btn-primary">Add Item</button>
+    <button id = "submitBtn" type = "submit"  class = "btn btn-primary">Add Item</button>
+    </form>
 <%- include('../partials/footer') %>

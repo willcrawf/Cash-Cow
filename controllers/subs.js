@@ -7,9 +7,9 @@ module.exports = {
 }
 
 function index(req, res){
-console.log(req.user._id)
+
     Sub.find({}, function(err, subs) {
-        res.render('subs/index', {title: "Current Subscriptions:", subs})
+        res.render('subs/index', {title: "Current Subscriptions:", subs, user: req.user})
     })
 }
 
