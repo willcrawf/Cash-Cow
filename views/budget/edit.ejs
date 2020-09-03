@@ -1,0 +1,43 @@
+<%- include('../partials/header') %>
+<form id = "add-item-form" action="/budget/<%= item._id %>?_method=PUT" method="POST">
+    <label>Item Name:
+        <input type = "text" value = "<%=item.name%>" name="name">
+        </label>
+    
+        <label>Cost:
+        <input type = "number" value = "<%=item.cost%>" name="cost">
+        </label>
+    
+        <label>Location:
+        <input type = "text" value = "<%=item.location%>" name="location">
+        </label>
+    
+        <label>Date Purchased:
+        <input type = "date" value = "<%=item.date%>" name="date">
+        </label>
+    
+        <label>Category:
+            <select name = "category" value = "<%=item.category%>">
+                <option value = "Housing">Housing Fees</option>
+                <option value = "Transportation">Transportation</option>
+                <option value = "Food/Drinks">Food/Drinks</option>
+                <option value = "Utilities">Utilities</option>
+                <option value = "Clothing">Clothing</option>
+                <option value = "Medical/Healthcare">Medical/Healthcare</option>
+                <option value = "Insurance">Insurance</option>
+                <option value = "Household Items/Supplies">Household items/Supplies</option>
+                <option value = "Debt">Debt</option>
+                <option value = "Education">Education</option>
+                <option value = "Gifts/Donations">Gifts/Donations</option>
+                <option value = "Entertainment">Entertainment</option>
+            </select>
+        </label>
+        
+        <label>Future Purchase?
+            <input class = "new" type ="checkbox" name = "upcoming" value = "<%=item.upcoming%>">
+        </label>
+        <br>
+    <button type="submit">Save Item</button>
+</form>
+
+<%- include('../partials/footer') %>

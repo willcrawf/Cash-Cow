@@ -1,11 +1,12 @@
 const User = require('../models/user');
-const { findById, findByIdAndDelete } = require('../models/user');
-const user = require('../models/user');
+const { findById } = require('../models/user');
 
 module.exports = {
     index,
     delete: deleteItem,
-    edit: editItem
+    editPage,
+    update
+}
 
 function index(req, res){
     User.findById(req.user._id, function(err, user){
@@ -21,3 +22,20 @@ function deleteItem(req, res){
     })
 }
 
+function editPage(req, res){
+    User.findById(req.user._id, function(err, user){
+        idx = user.items.findIndex((item) => item.id === req.params.id)
+            let item = req.user.items[idx]
+            res.render('budget/edit', {title: 'Edit Item', user, item})
+        })
+}
+
+function update(req, res){
+   User.findOneAndUpdate(req.params.id, req.body.id, {
+       new: true
+   })
+   req.user.save().then(() => {
+        res.redirect('/budget')
+   })
+   
+}
