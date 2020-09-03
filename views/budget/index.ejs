@@ -2,6 +2,8 @@
 <% function numberWithCommas(x) { %>
   <% return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); %>
 <% } %>
+
+
 <table class="table table-striped table-dark">
       <thead>
       <tr>
@@ -20,6 +22,8 @@
           <td><%= m.name %></td>
           <td>$<%=m.cost %></td>
           <td><%= m.location %></td>
+          
+          
 
           <!-- Proper Date Formatting: -->
           <% const dateTimeFormat = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'short', day: '2-digit' }) %>
@@ -34,10 +38,17 @@
           <% } else { %>
              <td><%= m.upcoming = "No" %></td>
             <% } %> 
-        </tr>
+            <td>
+            <form action="/budget/<%= m._id %>?_method=DELETE" method="POST" class ="delete-form">
+              <button class="btn btn-success" type="submit">X</button></td>
+            </form>
+            <td><a href="">Edit</a></td>
+        </tr> 
       <% }) %>
     </tbody>
   </table>
+  
+</form<>
 <% let totalSpendings = 0 %>
   <h3> Total Spendings: 
       <% user.items.forEach((m) => { %>

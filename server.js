@@ -2,6 +2,7 @@ const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
 const logger = require('morgan');
+const methodOverride = require('method-override')
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const passport = require('passport');
@@ -40,7 +41,7 @@ app.use(session({
   resave: false,
   saveUninitialized: true
 }));
-
+app.use(methodOverride('_method'))
 app.use(passport.initialize());
 app.use(passport.session());
 
