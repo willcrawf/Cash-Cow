@@ -8,15 +8,15 @@ As a college student, one of my biggest problems is money. I am always broke! I 
 
 ## Screenshots: 
 #### Wirecard:
-![altText](https://imgur.com/rxQpxgb "Fake Image")
+![altText](https://i.imgur.com/rxQpxgb.png "Fake Image")
 
 #### Database ER Diagram:
-![altText](https://imgur.com/sav929u"Fake Image")
+![altText](https://i.imgur.com/sav929u.png "Fake Image")
 
 #### App:
-![altText](https://imgur.com/33PT60P "Fake Image")
-![altText](https://imgur.com/ynoeZnC "Fake Image")
-![altText](https://imgur.com/kOO4HXl "Fake Image")
+![altText](https://i.imgur.com/33PT60P "Fake Image")
+![altText](https://i.imgur.com/ynoeZnC "Fake Image")
+![altText](https://i.imgur.com/kOO4HXl "Fake Image")
 
 
 ## Technologies Used:
