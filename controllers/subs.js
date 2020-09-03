@@ -11,12 +11,15 @@ module.exports = {
 function index(req, res){
     User.findById(req.user._id, function(err, user){
         console.log(user.subs)
-        res.render('subs/index', {title: 'Current Subscriptions', user})
+        res.render('subs/index', {title: 'Current Subscriptions',
+        subtitle: "Never miss a payment. Keep track of all of your current subscriptions below.",
+        description: "",
+         user})
     })
 }
 
 function newSub(req, res){
-    res.render('subs/new', {title: 'New Subscription', user: req.user})
+    res.render('subs/new', {title: 'New Subscription', subtitle: "", description: "", user: req.user})
 }
 
 function create(req, res) {
@@ -41,7 +44,7 @@ function editPage(req, res){
     User.findById(req.user._id, function(err, user){
         idx = user.subs.findIndex((sub) => sub.id === req.params.id)
             let sub = req.user.subs[idx]
-            res.render('budget/edit', {title: 'Edit sub', subtitle: "", user, sub})
+            res.render('budget/edit', {title: 'Edit sub', subtitle: "", description: "", user, sub})
         })
 }
 
