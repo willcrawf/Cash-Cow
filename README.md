@@ -14,9 +14,9 @@ As a college student, one of my biggest problems is money. I am always broke! I 
 ![altText](https://i.imgur.com/sav929u.png "Fake Image")
 
 #### App:
-![altText](https://i.imgur.com/33PT60P "Fake Image")
-![altText](https://i.imgur.com/ynoeZnC "Fake Image")
-![altText](https://i.imgur.com/kOO4HXl "Fake Image")
+![altText](https://i.imgur.com/33PT60P.png "Fake Image")
+![altText](https://i.imgur.com/ynoeZnC.png "Fake Image")
+![altText](https://i.imgur.com/kOO4HXl.png "Fake Image")
 
 
 ## Technologies Used:
