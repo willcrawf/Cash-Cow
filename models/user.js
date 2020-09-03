@@ -30,10 +30,11 @@ var userSchema = new mongoose.Schema({
   avatar: String,
   googleId: String,
   totalSpendings: Number,
-  budget: {type: Number, default: 500},
   topCategories: [topCategoriesSchema],
   items: [itemSchema],
-  subs: [subSchema]
+  subs: [subSchema],
+  budget: Number
+
 }, {
   timestamps: true
 });
