@@ -15,7 +15,6 @@
         <tr>
             <% categories.forEach((category) => { %>
                 <% let totalCost = 0; %>
-                <td> <%= category %> </td>
                 <% let count = 0; %>
                 <% for(let i = 0; i < user.items.length; i++) {%>
                     <% if(user.items[i].category === category) { %>
@@ -23,8 +22,11 @@
                       <% totalCost += user.items[i].cost %>
                    <% } %>
             <% } %> 
-            <td><%=count%></td>
-            <td><%=totalCost%></td>
+            <% if (count > 0) { %>
+                <td> <%= category %> </td>
+                <td><%=count%></td>
+                <td><%=totalCost%></td>
+            <% } %>
             </tr>
             <% }) %>
                

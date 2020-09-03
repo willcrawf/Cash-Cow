@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+<form id = "add-item-form" action="/subs/<%= item._id %>?_method=PUT" method="POST">
+    <label>Subscription Name:
+    <input type = "text" value = "<%=user.subs.name %>" name="name">
+    </label>
+
+    <label>Cost per cycle:
+    <input type = "text"  value = "<%=user.subs.cost %>" name="costPerCycle">
+    </label>
+
+    <label>Date Subscribed:
+    <input type = "date"  value = "<%=user.subs.date %>" name="date">
+    </label>
+
+
+    <button id = "submitBtn" type = "submit" class = "btn btn-primary">Add Item</button>
+
+<%- include('../partials/footer') %>

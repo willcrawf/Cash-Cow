@@ -18,6 +18,11 @@
         <% const dateTimeFormat = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'short', day: '2-digit' }) %>
           <% const [{ value: month },,{ value: day },,{ value: year }] = dateTimeFormat .formatToParts(m.date) %>
           <td><%= `${day}-${month}-${year }`%></td>
+          <td>
+            <form action="/subs/<%= m._id %>?_method=DELETE" method="POST" class ="delete-form">
+              <button class="btn btn-success" type="submit">X</button></td>
+            </form>
+            <td><a href="/subs/<%= m._id %>/edit">Edit</a></td>
       </tr>
     <% }) %>
   </tbody>
