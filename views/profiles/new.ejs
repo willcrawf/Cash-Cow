@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 <form id = "add-item-form" action="/profiles/<%= user._id %>?_method=PUT" method="POST">
     <label>Add Monthly Budget
-        <input type = "number" name = "budget" class = "new">
+        <input type = "number" value = <%= user.budget %> name = "budget">
         </label>
         <button type = "submit" >Add Budget</button>
     </form>

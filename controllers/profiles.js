@@ -18,13 +18,14 @@ function newBudget(req, res){
 }
 
 function update(req, res){
-    let idx = req.user.budget.find((budget) => budget.id === req.params.id)
-    req.user.budget.splice(idx, 1, req.body)
-        req.user.save().then(() => {
-            res.redirect('/profiles')
-    })
+    let budget = req.user.budget
+    User.findOneAndUpdate(req.params.id, req.body, {new: true}, (err, budget) => {
+        if (err) {
+            console.log("error with data")
+        }  
+        res.redirect('/profiles')
+})
 }
-
 
 
 // function create(req, res) {
