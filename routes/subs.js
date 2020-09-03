@@ -7,7 +7,7 @@ router.post('/:userId', isLoggedIn, subsCtrl.create)
 
 router.get('/:id/edit', isLoggedIn, subsCtrl.editPage)
 router.delete('/:id', isLoggedIn, subsCtrl.delete)
-router.put('/:id', subsCtrl.update)
+router.put('/:id', isLoggedIn, subsCtrl.update)
 
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) return next();

@@ -44,16 +44,15 @@ function editPage(req, res){
     User.findById(req.user._id, function(err, user){
         idx = user.subs.findIndex((sub) => sub.id === req.params.id)
             let sub = req.user.subs[idx]
-            res.render('budget/edit', {title: 'Edit sub', subtitle: "", description: "", user, sub})
+            res.render('subs/edit', {title: 'Edit sub', subtitle: "", description: "", user, sub})
         })
 }
 
+
 function update(req, res){
-   User.findOneAndUpdate(req.params.id, req.body.id, {
-       new: true
-   })
-   req.user.save().then(() => {
-        res.redirect('/budget')
-   })
-   
+    let idx = req.user.subs.findIndex((sub) => sub.id === req.params.id)
+    req.user.subs.splice(idx, 1, req.body)
+        req.user.save().then(() => {
+            res.redirect('/subs')
+    })
 }

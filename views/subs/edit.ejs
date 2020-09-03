@@ -1,5 +1,5 @@
 <%- include('../partials/header') %>
-<form id = "add-item-form" action="/subs/<%= item._id %>?_method=PUT" method="POST">
+<form id = "add-item-form" action="/subs/<%= sub._id %>?_method=PUT" method="POST">
     <label>Subscription Name:
     <input type = "text" value = "<%=user.subs.name %>" name="name">
     </label>

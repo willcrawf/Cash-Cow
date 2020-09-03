@@ -8,13 +8,16 @@ As a college student, one of my biggest problems is money. I am always broke! I 
 
 ## Screenshots: 
 #### Wirecard:
-![altText](https://fakeimg.pl/250x100/ "Fake Image")
+![altText](https://imgur.com/rxQpxgb "Fake Image")
 
 #### Database ER Diagram:
-![altText](https://fakeimg.pl/250x100/ "Fake Image")
+![altText](https://imgur.com/sav929u"Fake Image")
 
 #### App:
-![altText](https://fakeimg.pl/250x100/ "Fake Image")
+![altText](https://imgur.com/33PT60P "Fake Image")
+![altText](https://imgur.com/ynoeZnC "Fake Image")
+![altText](https://imgur.com/kOO4HXl "Fake Image")
+
 
 ## Technologies Used:
 * JavaScript
@@ -39,6 +42,7 @@ To get started, you must first log in and set a budget and account information. 
 * As a user, I want to be able to see my investments and how they are doing as well as graphs and profit/loss information.
 * As a user, I would want a savings tab that displays the balance of my savings account.
 * As a user, I want my budget information to be tied to only me and for other users to not be able to view them.
+* As a user, I want my budget information to be tied to only me and for other users to not be able to view them.
 
 ## Stretch Goals:
 * Add Investments (Stock, Bitcoin, etc)
@@ -46,4 +50,7 @@ To get started, you must first log in and set a budget and account information. 
 * Add color conditionals
 * Add homepage that shows important info (low balance, upcoming payments, etc)
 * Add a fiancial tip of the day API?
+* Add a savings section
+* Automatically reset budget items each month
+* Automatically add subscription items
 * Progress towards what I am saving for via progress bar.
