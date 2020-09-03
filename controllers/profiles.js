@@ -3,7 +3,8 @@ const User = require('../models/user');
 module.exports = {
     index,
     new: newBudget,
-    create
+    edit: editBudget
+    // create
 }
 
 function index(req, res){
@@ -16,12 +17,22 @@ function newBudget(req, res){
     res.render('profiles/new', {title: "New Budget", user: req.user})
 }
 
-
-function create(req, res) {
-    req.body.user = req.params.userId
-    User.findById(req.user._id)
-    .then(user => {
-        user.save(function(){
-            res.redirect('/profiles')})
+function editBudget(req, res){
+    User.findById(req.params.id, function(err, user){
+        // user.budget.update(req.body)
+        User.save(function(){
+            res.redirect('/profiles')
         })
+    })
 }
+
+
+
+// function create(req, res) {
+//     req.body.user = req.params.userId
+//     User.findById(req.user._id)
+//     .then(user => {
+//         user.save(function(){
+//             res.redirect('/profiles')})
+//         })
+// }

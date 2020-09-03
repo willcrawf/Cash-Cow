@@ -4,6 +4,6 @@ var profileCtrl = require('../controllers/profiles');
 
 
 router.get('/', profileCtrl.index)
-router.get('/new' , profileCtrl.new)
-router.post('/:userId', profileCtrl.create)
+router.get('/:userId/newBudget' , profileCtrl.new)
+router.put('/:userId', profileCtrl.edit)
 module.exports = router;

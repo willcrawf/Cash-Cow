@@ -33,7 +33,7 @@ var userSchema = new mongoose.Schema({
   topCategories: [topCategoriesSchema],
   items: [itemSchema],
   subs: [subSchema],
-  budget: Number
+  budget: {type: Number, default: 500}
 
 }, {
   timestamps: true

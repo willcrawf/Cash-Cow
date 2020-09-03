@@ -41,7 +41,7 @@ function editPage(req, res){
     User.findById(req.user._id, function(err, user){
         idx = user.subs.findIndex((sub) => sub.id === req.params.id)
             let sub = req.user.subs[idx]
-            res.render('budget/edit', {title: 'Edit sub', user, sub})
+            res.render('budget/edit', {title: 'Edit sub', subtitle: "", user, sub})
         })
 }
 

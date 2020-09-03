@@ -1,4 +1,4 @@
 <%- include('../partials/header') %>
-<h3>Budget: <%=user.budget%></h3>
-<a href = "/profiles/new">Edit Budget</a>
+<h4>Budget: $<%=user.budget%></h4>
+<a href = "/profiles/<%= user._id%>/newBudget">Edit Budget</a>
 <%- include('../partials/footer') %>

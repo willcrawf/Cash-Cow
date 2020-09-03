@@ -8,7 +8,11 @@ module.exports = {
     
 
 function itemPage(req, res){
-    res.render('items/new', {title: 'New Item', user: req.user})
+    res.render('items/new', 
+    {title: 'New Item',
+    subtitle: 'Add a new budget item here',
+    description: "",
+     user: req.user})
 }
 
 function create(req, res) {
