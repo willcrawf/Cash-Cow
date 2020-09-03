@@ -1,5 +1,5 @@
 # Cash Cow
-[Deploy Link](https://www.google.com "Deploy Link")
+[Deploy Link](https://thecashcow.herokuapp.com "Deploy Link")
 #### Made by Will Crawford
 
 
