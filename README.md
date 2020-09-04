@@ -46,10 +46,12 @@ To get started, you must first log in and set a budget and account information. 
 
 ## Stretch Goals:
 * Add Investments (Stock, Bitcoin, etc)
+* Add more detailed spending stats
+* Add budget remaining per day.
 * Be able to link with bank account (possibly?)
 * Add color conditionals
 * Add homepage that shows important info (low balance, upcoming payments, etc)
-* Add a fiancial tip of the day API?
+* Add a financial tip of the day API?
 * Add a savings section
 * Automatically reset budget items each month
 * Automatically add subscription items
