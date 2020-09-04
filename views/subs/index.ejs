@@ -27,5 +27,11 @@
     <% }) %>
   </tbody>
 </table>
-
+<% let totalSubCost = 0; %>
+<% user.subs.forEach((s) => { %>
+    <% totalSubCost += s.costPerCycle %>
+<% }) %>
+<% user.budget - totalSubCost %>
+<h2>Total Subscription Cost Per Month: $<%=totalSubCost%></h2>
+<h3>Percent of total budget: <%=((totalSubCost/user.budget)*100).toFixed(2)%>%</h3> 
 <%- include('../partials/footer') %>
