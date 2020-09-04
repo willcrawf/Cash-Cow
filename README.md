@@ -4,7 +4,7 @@
 
 
 ## Background: 
-As a college student, one of my biggest problems is money. I am always broke! I know there are plenty of budget and financial apps out there, but I really wanted to make an app that would have every feature. In turn, maybe I could learn some finance, budget, and saving skills. 
+As a college student, one of my biggest problems is money. I am always broke! I know there are plenty of budget and financial apps out there, but I really wanted to make an app that would have every feature that I personally wanted. In turn, maybe I could learn some finance, budget, and saving skills. 
 
 ## Screenshots: 
 #### Wirecard:
